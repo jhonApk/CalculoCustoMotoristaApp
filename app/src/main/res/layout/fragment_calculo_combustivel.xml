@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Layout.CalculoCombustivelFragment">
+
+
+    <TextView
+        android:id="@+id/tv_calculadoraProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Gasolina ou Etanol!"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_valorGasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45sp"
+        android:text="Qual valor da gasolina?"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineCenterProprio"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_valorGasolina"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valorGasolina"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+<TextView
+        android:id="@+id/tv_valorEtanol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual valor do etanol?"
+        android:layout_marginTop="14sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_valorGasolina"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_valorEtanol"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valorEtanol"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0sp"
+        android:layout_height="150sp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_valorEtanol"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="@color/black" >
+
+
+        <TextView
+            android:id="@+id/txt_fixe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="É mais vantagem abastecer com"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50sp"/>
+
+        <TextView
+            android:id="@+id/txt_GasOrEta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="GASOLINA"
+            android:textStyle="bold"
+            android:textColor="#E38801"
+            android:layout_gravity="center"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

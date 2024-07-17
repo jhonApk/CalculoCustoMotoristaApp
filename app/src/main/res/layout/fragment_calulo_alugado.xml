@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Layout.CaluloAlugadoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_calculadoraAlugado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="Calculadora de Custo!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_proprio"
+        android:layout_width="140sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="14sp"
+        android:textColor="@color/black"
+        android:text="Próprio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintTop_toBottomOf="@+id/tv_calculadoraAlugado" />
+
+    <Button
+        android:id="@+id/btn_alugado"
+        android:layout_width="140sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14sp"
+        android:text="Alugado"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEndProprio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_calculadoraAlugado" />
+
+
+    <TextView
+        android:id="@+id/tv_kmlAlugado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantos Km/L seu carro faz?"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineCenterProprio"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_kmlAlugado"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kmlAlugado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+    <TextView
+        android:id="@+id/tv_valorCombustivelAlugado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual valor do combustivel?"
+        android:layout_marginTop="14sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_kmlAlugado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_valorCombustivelAlugado"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valorCombustivelAlugado" />
+
+    <TextView
+        android:id="@+id/tv_aluguelCarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor do Aluguel?"
+        android:layout_marginTop="14sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_valorCombustivelAlugado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_valorAluguel"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aluguelCarro"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+    <TextView
+        android:id="@+id/tv_salarioMesAlgado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salario desejado?"
+        android:layout_marginTop="14sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_valorAluguel"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_salarioDesejadoAlugado"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_salarioMesAlgado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+    <TextView
+        android:id="@+id/tv_kmRodadoAlugado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantos km você roda no mês?"
+        android:layout_marginTop="14sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_salarioDesejadoAlugado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"/>
+
+    <EditText
+        android:id="@+id/edt_kmRodadoProprio"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kmRodadoAlugado"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"/>
+
+
+
+    <Button
+        android:id="@+id/btn_calcularAlugado"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Calcular"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndProprio"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStartProprio"
+        app:layout_constraintTop_toBottomOf="@+id/edt_kmRodadoProprio" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartProprio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
