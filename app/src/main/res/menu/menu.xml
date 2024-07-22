@@ -6,9 +6,9 @@
     <item android:title="Custo por km"
         android:icon="@drawable/baseline_car_24"
         app:showAsAction="ifRoom"
-        android:id="@+id/calculoCustoProprio"/>
+        android:id="@+id/calculoProprioFragment"/>
     <item
-        android:id="@+id/calculoCombustivel"
+        android:id="@+id/calculoCombustivelFragment"
         android:icon="@drawable/gasolina_24"
         app:showAsAction="ifRoom"
         android:title="Combustivel" />

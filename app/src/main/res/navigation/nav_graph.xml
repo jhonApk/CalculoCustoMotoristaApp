@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/calculoCustoProprio">
-
+    app:startDestination="@id/calculoProprioFragment">
     <fragment
-        android:id="@+id/calculoCustoProprio"
+        android:id="@+id/calculoProprioFragment"
         android:name="com.devjhon.calculomotoristaapp.Layout.CalculoProprioFragment"
         android:label="fragment_calculo_proprio"
         tools:layout="@layout/fragment_calculo_proprio" >
@@ -15,17 +14,21 @@
             app:destination="@id/caluloAlugadoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/calculoCombustivel"
-        android:name="com.devjhon.calculomotoristaapp.Layout.CalculoCombustivelFragment"
-        android:label="fragment_calculo_combustivel"
-        tools:layout="@layout/fragment_calculo_combustivel" />
-    <fragment
         android:id="@+id/caluloAlugadoFragment"
         android:name="com.devjhon.calculomotoristaapp.Layout.CaluloAlugadoFragment"
         android:label="fragment_calulo_alugado"
         tools:layout="@layout/fragment_calulo_alugado" >
         <action
-            android:id="@+id/action_caluloAlugadoFragment_to_calculoCustoProprio"
-            app:destination="@id/calculoCustoProprio" />
+            android:id="@+id/action_caluloAlugadoFragment_to_calculoProprioFragment"
+            app:destination="@id/calculoProprioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculoCombustivelFragment"
+        android:name="com.devjhon.calculomotoristaapp.Layout.CalculoCombustivelFragment"
+        android:label="fragment_calculo_combustivel"
+        tools:layout="@layout/fragment_calculo_combustivel" >
+        <action
+            android:id="@+id/action_calculoCombustivelFragment_to_calculoProprioFragment"
+            app:destination="@id/calculoProprioFragment" />
     </fragment>
 </navigation>

@@ -6,10 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.Navigation
 import com.devjhon.calculomotoristaapp.R
+import com.devjhon.calculomotoristaapp.databinding.FragmentCaluloAlugadoBinding
 
-class CaluloAlugadoFragment : Fragment() {
+class CaluloAlugadoFragment : Fragment(), View.OnClickListener {
+
+    private lateinit var  _binding: FragmentCaluloAlugadoBinding
+    private val binding get()  = _binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -19,13 +24,32 @@ class CaluloAlugadoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_calulo_alugado, container, false)
+    ): View {
+        _binding = FragmentCaluloAlugadoBinding.inflate(inflater, container, false)
+        binding.btnCalcularAlugado.setOnClickListener(this)
+        return binding.root
+    }
 
-        view.findViewById<Button>(R.id.btn_proprio).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_caluloAlugadoFragment_to_calculoCustoProprio)
+    override fun onClick(view: View) {
+        if(view.id == R.id.btn_calcularAlugado){
+            calcularAlugado()
         }
-        return view
+    }
+
+    fun calcularAlugado(){
+        val kmPorLitro = binding.edtKmlAlugado.text.toString().toFloat()
+        val valorCombustivelAlugado = binding.edtValorCombustivelAlugado.text.toString().toFloat()
+        val valorAluguel = binding.edtValorAluguel.text.toString().toFloat()
+        val salarioAlugado = binding.edtSalarioDesejadoAlugado.text.toString().toFloat()
+        val kmRodadosAlugado = binding.edtKmRodadoAlugado.text.toString().toFloat()
+
+        val quantidadeLitrosAlg = kmRodadosAlugado / kmPorLitro
+        val totalCombustivel = quantidadeLitrosAlg * valorCombustivelAlugado
+
+        val valorTotalAlugado = totalCombustivel + valorAluguel + salarioAlugado
+
+        binding.txtValorTotalAlugado.text = "R$ ${"%.2f".format(valorTotalAlugado)}"
+
+        Toast.makeText(requireContext(), "$valorTotalAlugado", Toast.LENGTH_SHORT).show()
     }
 }
