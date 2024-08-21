@@ -7,9 +7,17 @@
         android:icon="@drawable/baseline_car_24"
         app:showAsAction="ifRoom"
         android:id="@+id/calculoProprioFragment"/>
+
+    <item
+        android:id="@+id/historicoCalculoFragment"
+        android:icon="@drawable/baseline_history_24"
+        app:showAsAction="ifRoom"
+        android:title="Historico" />
+
     <item
         android:id="@+id/calculoCombustivelFragment"
         android:icon="@drawable/gasolina_24"
         app:showAsAction="ifRoom"
         android:title="Combustivel" />
+
 </menu>

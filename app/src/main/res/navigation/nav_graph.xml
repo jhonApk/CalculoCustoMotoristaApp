@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_calculoProprioFragment_to_caluloAlugadoFragment"
             app:destination="@id/caluloAlugadoFragment" />
+        <action
+            android:id="@+id/action_calculoProprioFragment_to_historicoFragment"
+            app:destination="@id/historicoCalculoFragment" />
     </fragment>
     <fragment
         android:id="@+id/caluloAlugadoFragment"
@@ -21,6 +24,9 @@
         <action
             android:id="@+id/action_caluloAlugadoFragment_to_calculoProprioFragment"
             app:destination="@id/calculoProprioFragment" />
+        <action
+            android:id="@+id/action_caluloAlugadoFragment_to_historicoFragment"
+            app:destination="@id/historicoCalculoFragment" />
     </fragment>
     <fragment
         android:id="@+id/calculoCombustivelFragment"
@@ -29,6 +35,18 @@
         tools:layout="@layout/fragment_calculo_combustivel" >
         <action
             android:id="@+id/action_calculoCombustivelFragment_to_calculoProprioFragment"
+            app:destination="@id/calculoProprioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicoCalculoFragment"
+        android:name="com.devjhon.calculomotoristaapp.HistoricoFragment"
+        android:label="fragment_historico"
+        tools:layout="@layout/fragment_historico" >
+        <action
+            android:id="@+id/action_historicoFragment_to_caluloAlugadoFragment"
+            app:destination="@id/caluloAlugadoFragment" />
+        <action
+            android:id="@+id/action_historicoFragment_to_calculoProprioFragment"
             app:destination="@id/calculoProprioFragment" />
     </fragment>
 </navigation>

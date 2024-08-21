@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HistoricoFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdwProprio"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Carro Proprio"
+            android:textColor="#FFC107"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_marginTop="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:text="Vocẽ precisa fazer um total : "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/txt_salario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:layout_marginTop="8sp"
+            android:text="Para ter um salario de: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total" />
+
+        <TextView
+            android:id="@+id/txt_kmRodado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:text="Rodando um Total de: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_salario" />
+
+        <TextView
+            android:id="@+id/txt_aceitarKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16sp"
+            android:text="Aceitar corridas acima de: "
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_kmRodado" />
+
+
+        <TextView
+            android:id="@+id/txt_cardTotal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 12.850,00"
+            android:textColor="#FFC107"
+            android:textStyle="bold"
+            android:layout_marginTop="19sp"
+            android:layout_marginStart="8sp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_total"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/txt_salario1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 5.000"
+            android:textColor="#FFC107"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="8sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_salario"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cardTotal1" />
+
+        <TextView
+            android:id="@+id/txt_kmRodado1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="8sp"
+            android:text="6000 km"
+            android:textColor="#FFC107"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_kmRodado"
+            app:layout_constraintTop_toBottomOf="@+id/txt_salario1" />
+
+        <TextView
+            android:id="@+id/txt_aceitarKm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7sp"
+            android:layout_marginStart="8sp"
+            android:text="R$ 1.80/km"
+            android:textColor="#FFC107"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_aceitarKm"
+            app:layout_constraintTop_toBottomOf="@+id/txt_kmRodado1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_carroAlugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Carro Alugado"
+            android:textColor="#FFC107"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_totalAlugado"
+            android:layout_marginTop="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:text="Vocẽ precisa fazer um total : "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_carroAlugado" />
+
+
+        <TextView
+            android:id="@+id/txt_salarioAlugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:layout_marginTop="8sp"
+            android:text="Para ter um salario de: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_totalAlugado" />
+
+        <TextView
+            android:id="@+id/txt_kmRodadoAlugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="16sp"
+            android:textSize="14sp"
+            android:text="Rodando um Total de: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_salarioAlugado" />
+
+        <TextView
+            android:id="@+id/txt_aceitarKmAlugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16sp"
+            android:text="Aceitar corridas acima de: "
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_kmRodadoAlugado" />
+
+
+        <TextView
+            android:id="@+id/txt_total1Alugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 12.850,00"
+            android:textColor="#FFC107"
+            android:textStyle="bold"
+            android:layout_marginTop="19sp"
+            android:layout_marginStart="8sp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_totalAlugado"
+            app:layout_constraintTop_toBottomOf="@+id/txt_carroAlugado" />
+
+
+        <TextView
+            android:id="@+id/txt_salario1Alugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 5.000"
+            android:textColor="#FFC107"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="8sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_salarioAlugado"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total1Alugado" />
+
+        <TextView
+            android:id="@+id/txt_kmRodado1Alugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginStart="8sp"
+            android:text="6000 km"
+            android:textColor="#FFC107"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_kmRodadoAlugado"
+            app:layout_constraintTop_toBottomOf="@+id/txt_salario1Alugado" />
+
+        <TextView
+            android:id="@+id/txt_aceitarKm1Alugado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="7sp"
+            android:text="R$ 1.80/km"
+            android:textColor="#FFC107"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@+id/txt_aceitarKmAlugado"
+            app:layout_constraintTop_toBottomOf="@+id/txt_kmRodado1Alugado" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

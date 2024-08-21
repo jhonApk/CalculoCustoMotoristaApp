@@ -61,7 +61,7 @@ class CalculoProprioFragment : Fragment(), View.OnClickListener{
 
         val valorTotal = valorTotalCombustivelProprio + parcelaCarro + valorManutecao + reservaImprevisto + salarioDesejado
 
-        binding.txtValorTotal.text = "R$ ${"%.2f".format(valorTotal)}"
+        binding.txt_aceitarKm.text = "R$ ${"%.2f".format(valorTotal)}"
 
         Toast.makeText(requireContext(), "$valorTotal", Toast.LENGTH_SHORT).show()
     }

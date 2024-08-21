@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.devjhon.calculomotoristaapp.R
 import com.devjhon.calculomotoristaapp.databinding.FragmentCaluloAlugadoBinding
 
@@ -28,6 +29,13 @@ class CaluloAlugadoFragment : Fragment(), View.OnClickListener {
         _binding = FragmentCaluloAlugadoBinding.inflate(inflater, container, false)
         binding.btnCalcularAlugado.setOnClickListener(this)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnProprio.setOnClickListener {
+            findNavController().navigate(R.id.action_caluloAlugadoFragment_to_calculoProprioFragment)
+        }
     }
 
     override fun onClick(view: View) {
